@@ -1,0 +1,206 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+html,
+body {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+.logo-track {
+                                display: flex;
+                                align-items: center;
+                                gap: 40px;
+                                width: max-content;
+                                animation: scroll 15s linear infinite;
+                            }
+
+                            @keyframes scroll {
+                                from {
+                                    transform: translateX(0);
+                                }
+
+                                to {
+                                    transform: translateX(-50%);
+                                }
+                            }
+
+                            .custom-scrollbar::-webkit-scrollbar {
+                                height: 4px;
+                            }
+
+                            .custom-scrollbar::-webkit-scrollbar-track {
+                                background: transparent;
+                            }
+
+                            .custom-scrollbar::-webkit-scrollbar-thumb {
+                                background: #d1d5db;
+                                border-radius: 999px;
+                            }
+
+                            /* Hero Section ke Image ke liye  */
+                            /* Student Floating Animation */
+                            .floating-student {
+                                animation: floatStudent 6s ease-in-out infinite;
+                            }
+
+                            @keyframes floatStudent {
+                                0% {
+                                    transform: translateY(0px) rotate(0deg);
+                                }
+
+                                25% {
+                                    transform: translateY(-12px) rotate(0.5deg);
+                                }
+
+                                50% {
+                                    transform: translateY(0px) rotate(0deg);
+                                }
+
+                                75% {
+                                    transform: translateY(-8px) rotate(-0.5deg);
+                                }
+
+                                100% {
+                                    transform: translateY(0px) rotate(0deg);
+                                }
+                            }
+
+                            /* Premium Glow Pulse */
+                            .animate-pulse-slow {
+                                animation: glowPulse 5s ease-in-out infinite;
+                            }
+
+                            @keyframes glowPulse {
+
+                                0%,
+                                100% {
+                                    transform: scale(1);
+                                    opacity: .5;
+                                }
+
+                                50% {
+                                    transform: scale(1.15);
+                                    opacity: .9;
+                                }
+                            }
+
+                            /* Rotating Gradient Ring */
+                            .ring-animation {
+                                background: conic-gradient(from 0deg,
+                                        transparent,
+                                        rgba(168, 85, 247, .8),
+                                        transparent);
+
+                                animation: rotateRing 10s linear infinite;
+                                filter: blur(8px);
+                            }
+
+                            @keyframes rotateRing {
+                                from {
+                                    transform: rotate(0deg);
+                                }
+
+                                to {
+                                    transform: rotate(360deg);
+                                }
+                            }
+
+                            /* Floating Particles */
+                            .particle {
+                                position: absolute;
+                                width: 10px;
+                                height: 10px;
+                                background: #a855f7;
+                                border-radius: 999px;
+                                box-shadow: 0 0 15px #a855f7;
+                            }
+
+                            .particle-1 {
+                                left: 20%;
+                                top: 70%;
+                                animation: particleMove 8s linear infinite;
+                            }
+
+                            .particle-2 {
+                                left: 40%;
+                                top: 80%;
+                                animation: particleMove 10s linear infinite;
+                            }
+
+                            .particle-3 {
+                                left: 60%;
+                                top: 75%;
+                                animation: particleMove 7s linear infinite;
+                            }
+
+                            .particle-4 {
+                                left: 80%;
+                                top: 85%;
+                                animation: particleMove 9s linear infinite;
+                            }
+
+                            .particle-5 {
+                                left: 50%;
+                                top: 90%;
+                                animation: particleMove 11s linear infinite;
+                            }
+
+                            @keyframes particleMove {
+                                0% {
+                                    transform: translateY(0) scale(.5);
+                                    opacity: 0;
+                                }
+
+                                20% {
+                                    opacity: 1;
+                                }
+
+                                100% {
+                                    transform: translateY(-400px) scale(1.2);
+                                    opacity: 0;
+                                }
+                            }
+
+                            /* Desktop/Laptop -> Animation */
+                            @media (min-width: 1024px) {
+
+                                .typing {
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    border-right: 3px solid #7C3AED;
+                                    width: 0;
+
+                                    animation:
+                                        typing 5s steps(18, end) forwards,
+                                        hideCursor 0s 4s forwards;
+                                }
+
+                                @keyframes typing {
+                                    from {
+                                        width: 0;
+                                    }
+
+                                    to {
+                                        width: 18ch;
+                                    }
+                                }
+
+                                @keyframes hideCursor {
+                                    to {
+                                        border-right: none;
+                                    }
+                                }
+                            }
