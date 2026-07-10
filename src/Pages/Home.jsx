@@ -24,7 +24,7 @@ function Home() {
 
     // Backend se jobs fetch karo
     useEffect(() => {
-        fetch("http://localhost:8080/api/jobs")
+        fetch("http://https://jobportal-backend-cm33.onrender.com/api/jobs")
             .then((res) => res.json())
             .then((data) => {
                 setAllJobs(data);

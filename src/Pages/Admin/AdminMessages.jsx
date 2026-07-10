@@ -25,7 +25,7 @@ const AdminMessages = () => {
     setDeletingId(id);
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch(`http://localhost:8080/api/admin/contact-enquiries/${id}`, {
+      const response = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/contact-enquiries/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -58,7 +58,7 @@ const AdminMessages = () => {
     try {
       const token = localStorage.getItem('authToken');
       const response = await fetch(
-        `http://localhost:8080/api/admin/contact-enquiries/${selectedMessage.id}/reply`,
+        `http://https://jobportal-backend-cm33.onrender.com/api/admin/contact-enquiries/${selectedMessage.id}/reply`,
         {
           method: 'PUT',
           headers: {
@@ -93,7 +93,7 @@ const AdminMessages = () => {
     const fetchMessages = async () => {
       try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch('http://localhost:8080/api/admin/contact-enquiries', {
+        const response = await fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/contact-enquiries', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

@@ -10,7 +10,7 @@ const Newsletter = () => {
     setSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:8080/api/newsletter/subscribe', {
+      const response = await fetch('http://https://jobportal-backend-cm33.onrender.com/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),

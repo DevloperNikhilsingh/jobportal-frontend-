@@ -30,7 +30,7 @@ const LoginForm = ({ role, goToRegister, goToForgotPassword }) => {
         setLoading(true);
 
         try {
-            const response = await fetch("http://localhost:8080/api/auth/login", {
+            const response = await fetch("http://https://jobportal-backend-cm33.onrender.com/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

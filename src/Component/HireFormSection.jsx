@@ -97,7 +97,7 @@ const HireFormSection = () => {
                 data.append("image", formData.image);
             }
 
-            const response = await fetch("http://localhost:8080/api/want-to-hire", {
+            const response = await fetch("http://https://jobportal-backend-cm33.onrender.com/api/want-to-hire", {
                 method: "POST",
                 headers: {
                     Authorization: "Bearer " + authToken,

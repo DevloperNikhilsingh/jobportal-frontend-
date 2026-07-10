@@ -27,10 +27,10 @@ const Dashboard = () => {
         const headers = { Authorization: `Bearer ${token}` };
 
         const [statsRes, applicationsRes, requestsRes, messagesRes] = await Promise.all([
-          fetch('http://localhost:8080/api/admin/dashboard-stats', { headers }),
-          fetch('http://localhost:8080/api/admin/applications', { headers }),
-          fetch('http://localhost:8080/api/admin/want-to-hire-requests', { headers }),
-          fetch('http://localhost:8080/api/admin/contact-enquiries', { headers }),
+          fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/dashboard-stats', { headers }),
+          fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/applications', { headers }),
+          fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/want-to-hire-requests', { headers }),
+          fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/contact-enquiries', { headers }),
         ]);
 
         if (!statsRes.ok || !applicationsRes.ok || !requestsRes.ok || !messagesRes.ok) {
