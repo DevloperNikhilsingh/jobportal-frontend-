@@ -194,7 +194,7 @@ const AplyFormSection = ({jobId}) => {
             data.append("qualification", formData.qualification);
             data.append("resume", formData.resume);
 
-            const response = await fetch("http://https://jobportal-backend-cm33.onrender.com/api/apply-job", {
+            const response = await fetch("https://jobportal-backend-production-9a5e.up.railway.app/api/apply-job", {
                 method: "POST",
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("authToken"),

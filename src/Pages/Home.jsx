@@ -24,7 +24,7 @@ function Home() {
 
     // Backend se jobs fetch karo
     useEffect(() => {
-        fetch("http://https://jobportal-backend-cm33.onrender.com/api/jobs")
+        fetch("https://jobportal-backend-production-9a5e.up.railway.app/api/jobs")
             .then((res) => res.json())
             .then((data) => {
                 setAllJobs(data);

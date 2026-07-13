@@ -16,7 +16,7 @@ const AdminApplications = () => {
   const fetchApplications = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/applications', {
+      const res = await fetch('https://jobportal-backend-production-9a5e.up.railway.app/api/admin/applications', {
         headers: { Authorization: 'Bearer ' + token },
       });
       if (!res.ok) {
@@ -42,7 +42,7 @@ const AdminApplications = () => {
   const handleShortlist = async (id) => {
     setActionLoadingId(id);
     try {
-      const res = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/applications/${id}/shortlist`, {
+      const res = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/applications/${id}/shortlist`, {
         method: 'PUT',
         headers: { Authorization: 'Bearer ' + token },
       });
@@ -67,7 +67,7 @@ const AdminApplications = () => {
     if (!window.confirm('Reject this application? An email will be sent to the applicant.')) return;
     setActionLoadingId(id);
     try {
-      const res = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/applications/${id}/reject`, {
+      const res = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/applications/${id}/reject`, {
         method: 'PUT',
         headers: { Authorization: 'Bearer ' + token },
       });
@@ -385,7 +385,7 @@ const AdminApplications = () => {
                 <div className="mt-2">
                   {viewingApp.resumeUrl ? (
                     <a
-                      href={`http://https://jobportal-backend-cm33.onrender.com/uploads/${viewingApp.resumeUrl}`}
+                      href={`https://jobportal-backend-production-9a5e.up.railway.app/uploads/${viewingApp.resumeUrl}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-linear-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA] text-white font-medium"

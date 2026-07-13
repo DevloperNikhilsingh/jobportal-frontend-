@@ -28,7 +28,7 @@ export const AdminAuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const res = await fetch('http://https://jobportal-backend-cm33.onrender.com/api/auth/admin/login', {
+      const res = await fetch('https://jobportal-backend-production-9a5e.up.railway.app/api/auth/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

@@ -43,7 +43,7 @@ const JobSection = ({ filteredJobs, applyJob, scrollToApplyForm }) => {
               >
                 <div className="shrink-0">
                   <img
-                    src={job.imageUrl ? `http://https://jobportal-backend-cm33.onrender.com/uploads/${job.imageUrl}` : "/placeholder.jpg"}
+                    src={job.imageUrl ? `https://jobportal-backend-production-9a5e.up.railway.app/uploads/${job.imageUrl}` : "/placeholder.jpg"}
                     alt={job.jobTitle}
                     className="w-full h-62.5 md:w-75 md:h-75 object-contain sm:object-cover object-top border-2 rounded-lg"
                   />

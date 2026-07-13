@@ -38,7 +38,7 @@ const Contact = () => {
         role: activeRole, // 'jobseeker' or 'employer' -> backend uppercases it
       };
 
-      const response = await fetch("http://https://jobportal-backend-cm33.onrender.com/api/contact", {
+      const response = await fetch("https://jobportal-backend-production-9a5e.up.railway.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

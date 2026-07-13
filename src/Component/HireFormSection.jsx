@@ -97,7 +97,7 @@ const HireFormSection = () => {
                 data.append("image", formData.image);
             }
 
-            const response = await fetch("http://https://jobportal-backend-cm33.onrender.com/api/want-to-hire", {
+            const response = await fetch("https://jobportal-backend-production-9a5e.up.railway.app/api/want-to-hire", {
                 method: "POST",
                 headers: {
                     Authorization: "Bearer " + authToken,
@@ -135,7 +135,7 @@ const HireFormSection = () => {
     };
 
     return (
-        <section class="py-6 px-4 bg-[#f4f3f8] mt-4" >
+        <section id="Postjob" class="py-6 px-4 bg-[#f4f3f8] mt-4" >
             <div class="max-w-7xl mt-6">
                 <motion.h1 
                     class="text-xl md:text-4xl text-center font-poppins font-bold text-black "

@@ -22,7 +22,7 @@ const AdminJobs = () => {
   const fetchJobs = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/jobs', {
+      const res = await fetch('https://jobportal-backend-production-9a5e.up.railway.app/api/admin/jobs', {
         headers: { Authorization: 'Bearer ' + token },
       });
       if (!res.ok) {
@@ -48,7 +48,7 @@ const AdminJobs = () => {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this job?')) return;
     try {
-      const res = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/jobs/${id}`, {
+      const res = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/jobs/${id}`, {
         method: 'DELETE',
         headers: { Authorization: 'Bearer ' + token },
       });
@@ -84,7 +84,7 @@ const AdminJobs = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/jobs/${editingJob.id}`, {
+      const res = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/jobs/${editingJob.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ const AdminJobs = () => {
                       <img
                         src={
                           job.imageUrl
-                            ? `http://https://jobportal-backend-cm33.onrender.com/uploads/${job.imageUrl}`
+                            ? `https://jobportal-backend-production-9a5e.up.railway.app/uploads/${job.imageUrl}`
                             : '/placeholder.jpg'
                         }
                         alt={job.jobTitle}

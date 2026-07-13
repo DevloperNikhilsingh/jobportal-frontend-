@@ -24,7 +24,7 @@ const AdminPlacements = () => {
 
   const fetchPlacements = async () => {
     try {
-      const response = await fetch('http://https://jobportal-backend-cm33.onrender.com/api/placements');
+      const response = await fetch('https://jobportal-backend-production-9a5e.up.railway.app/api/placements');
       if (!response.ok) throw new Error('Failed to fetch placements');
       const data = await response.json();
       setPlacements(data);
@@ -85,7 +85,7 @@ const AdminPlacements = () => {
         data.append('image', imageFile);
       }
 
-      const response = await fetch('http://https://jobportal-backend-cm33.onrender.com/api/admin/placements', {
+      const response = await fetch('https://jobportal-backend-production-9a5e.up.railway.app/api/admin/placements', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -112,7 +112,7 @@ const AdminPlacements = () => {
 
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/placements/${id}`, {
+      const response = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/placements/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -304,7 +304,7 @@ const AdminPlacements = () => {
                     >
                       {p.imageUrl ? (
                         <img
-                          src={`http://https://jobportal-backend-cm33.onrender.com${p.imageUrl}`}
+                          src={`https://jobportal-backend-production-9a5e.up.railway.app${p.imageUrl}`}
                           alt={p.studentName}
                           className="w-14 h-14 rounded-full object-cover border border-gray-200"
                         />

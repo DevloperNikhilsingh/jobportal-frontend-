@@ -30,7 +30,7 @@ const LoginForm = ({ role, goToRegister, goToForgotPassword }) => {
         setLoading(true);
 
         try {
-            const response = await fetch("http://https://jobportal-backend-cm33.onrender.com/api/auth/login", {
+            const response = await fetch("https://jobportal-backend-production-9a5e.up.railway.app/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

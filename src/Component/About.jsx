@@ -11,7 +11,7 @@ const About = () => {
   useEffect(() => {
     const fetchPlacements = async() => {
       try {
-         const response = await fetch('https://jobportal-backend-cm33.onrender.com/api/placements');
+         const response = await fetch('https://jobportal-backend-production-9a5e.up.railway.app/api/placements');
         if (!response.ok) throw new Error('Failed to fetch placements');
         const data = await response.json();
 
@@ -194,7 +194,7 @@ const About = () => {
                 >
                   <div className="relative">
                     <img
-                      src={p.imageUrl ? `http://https://jobportal-backend-cm33.onrender.com${p.imageUrl}` : "student.png"}
+                      src={p.imageUrl ? `https://jobportal-backend-production-9a5e.up.railway.app${p.imageUrl}` : "student.png"}
                       onError={(e) => {
                         e.target.src = "student.png";
                       }}

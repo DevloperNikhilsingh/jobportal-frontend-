@@ -7,7 +7,7 @@ const Faq = () => {
         setOpenfaq((prev) => (prev === id ? null : id));
     };
     return (
-        <section class="relative z-10 max-w-5xl mx-auto px-4 pb-28 mt-16">
+        <section id="faq" class="relative z-10 max-w-5xl mx-auto px-4 pb-28 mt-16">
             <div class="text-center mb-12">
                 <motion.h2 
                     class="text-3xl font-bold font-poppins text-black dark:text-white mb-2"

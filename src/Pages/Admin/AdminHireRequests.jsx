@@ -16,7 +16,7 @@ const AdminHireRequests = () => {
   const fetchRequests = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://https://jobportal-backend-cm33.onrender.com/api/admin/want-to-hire-requests", {
+      const res = await fetch("https://jobportal-backend-production-9a5e.up.railway.app/api/admin/want-to-hire-requests", {
         headers: { Authorization: "Bearer " + token },
       });
       const data = await res.json();
@@ -35,7 +35,7 @@ const AdminHireRequests = () => {
   const handleApprove = async (id) => {
     setActionLoadingId(id);
     try {
-      const res = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/approve-job/${id}`, {
+      const res = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/approve-job/${id}`, {
         method: "POST",
         headers: { Authorization: "Bearer " + token },
       });
@@ -52,7 +52,7 @@ const AdminHireRequests = () => {
   const handleReject = async (id) => {
     setActionLoadingId(id);
     try {
-      const res = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/reject-job/${id}`, {
+      const res = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/reject-job/${id}`, {
         method: "POST",
         headers: { Authorization: "Bearer " + token },
       });
@@ -70,7 +70,7 @@ const AdminHireRequests = () => {
     if (!window.confirm("Are you sure you want to delete this request? This cannot be undone.")) return;
     setActionLoadingId(id);
     try {
-      const res = await fetch(`http://https://jobportal-backend-cm33.onrender.com/api/admin/want-to-hire-requests/${id}`, {
+      const res = await fetch(`https://jobportal-backend-production-9a5e.up.railway.app/api/admin/want-to-hire-requests/${id}`, {
         method: "DELETE",
         headers: { Authorization: "Bearer " + token },
       });
@@ -158,9 +158,9 @@ const AdminHireRequests = () => {
                         {/* Image thumbnail - click to preview */}
                         {req.imageUrl ? (
                           <img
-                            src={`http://https://jobportal-backend-cm33.onrender.com/uploads/${req.imageUrl}`}
+                            src={`https://jobportal-backend-production-9a5e.up.railway.app/uploads/${req.imageUrl}`}
                             alt={req.jobTitle}
-                            onClick={() => setPreviewImage(`http://https://jobportal-backend-cm33.onrender.com/uploads/${req.imageUrl}`)}
+                            onClick={() => setPreviewImage(`https://jobportal-backend-production-9a5e.up.railway.app/uploads/${req.imageUrl}`)}
                             className="w-20 h-20 object-cover rounded-lg border cursor-pointer hover:opacity-80 transition"
                           />
                         ) : (
