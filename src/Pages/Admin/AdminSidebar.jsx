@@ -25,7 +25,7 @@ const AdminSidebar = ({ isMobile, onClose }) => {
 
   return (
     <motion.div
-      className={`bg-white border-r border-gray-200 shadow-lg ${
+      className={`h-screen  bg-white border-r border-gray-200 shadow-lg ${
         isMobile ? 'fixed inset-y-0 left-0 z-50 w-64' : 'hidden md:flex'
       } flex-col`}
       initial={isMobile ? { x: -300 } : false}

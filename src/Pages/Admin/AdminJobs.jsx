@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AdminSidebar from './AdminSidebar';
+import AddJobModal from './AddjobModal';
 import { Menu, Bell, Search, Plus, Edit, Trash2, X } from 'lucide-react';
 
 const AdminJobs = () => {
+
+   const [isAddJobOpen, setIsAddJobOpen] = useState(false);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [jobList, setJobList] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -151,10 +155,18 @@ const AdminJobs = () => {
               className="px-4 py-2 rounded-xl bg-linear-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA] text-white font-medium flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setIsAddJobOpen(true)}
             >
               <Plus className="w-5 h-5" />
               Add Job
             </motion.button>
+            {/* jobs list yahan */}
+
+      <AddJobModal
+        isOpen={isAddJobOpen}
+        onClose={() => setIsAddJobOpen(false)}
+        onJobAdded={fetchJobs}
+      />
           </div>
         </header>
 

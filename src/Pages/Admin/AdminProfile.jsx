@@ -34,7 +34,7 @@ const AdminProfile = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#f4f3f8] flex">
+    <div className="h-screen bg-[#f4f3f8] flex">
       <AdminSidebar />
       
       {isMobileMenuOpen && (

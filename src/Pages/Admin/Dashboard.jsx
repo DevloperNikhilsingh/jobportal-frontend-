@@ -76,7 +76,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f4f3f8] flex">
+    <div className="h-screen overflow-hidden bg-[#f4f3f8] flex">
       <AdminSidebar />
 
       {isMobileMenuOpen && (
