@@ -180,7 +180,7 @@ const AdminJobs = () => {
                       <img
                         src={
                           job.imageUrl
-                            ? `https://jobportal-backend-production-9a5e.up.railway.app/uploads/${job.imageUrl}`
+                            ? `${job.imageUrl}`
                             : '/placeholder.jpg'
                         }
                         alt={job.jobTitle}
