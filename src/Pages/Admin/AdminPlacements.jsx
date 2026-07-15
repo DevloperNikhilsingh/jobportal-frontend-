@@ -304,7 +304,7 @@ const AdminPlacements = () => {
                     >
                       {p.imageUrl ? (
                         <img
-                          src={`https://jobportal-backend-production-9a5e.up.railway.app${p.imageUrl}`}
+                          src={`${p.imageUrl}`}
                           alt={p.studentName}
                           className="w-14 h-14 rounded-full object-cover border border-gray-200"
                         />
