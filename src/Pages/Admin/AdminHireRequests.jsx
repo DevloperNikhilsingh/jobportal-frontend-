@@ -158,9 +158,9 @@ const AdminHireRequests = () => {
                         {/* Image thumbnail - click to preview */}
                         {req.imageUrl ? (
                           <img
-                            src={`https://jobportal-backend-production-9a5e.up.railway.app/uploads/${req.imageUrl}`}
+                            src={`${req.imageUrl}`}
                             alt={req.jobTitle}
-                            onClick={() => setPreviewImage(`https://jobportal-backend-production-9a5e.up.railway.app/uploads/${req.imageUrl}`)}
+                            onClick={() => setPreviewImage(`${req.imageUrl}`)}
                             className="w-20 h-20 object-cover rounded-lg border cursor-pointer hover:opacity-80 transition"
                           />
                         ) : (
