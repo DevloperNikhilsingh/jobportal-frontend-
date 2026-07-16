@@ -166,12 +166,12 @@ export default function Navbar({ openAuthModal }) {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.0 }}
                 >
 
-                    <div className="flex flex-col py-5 ">
+                    <div className="flex flex-col gap-2 p-4 ">
 
-                        <a href="index.jsp"
+                        <a href="#home"
                             class="text-black font-inter dark:text-white hover:text-orange-400  font-medium transition">
                             Home
                         </a>
