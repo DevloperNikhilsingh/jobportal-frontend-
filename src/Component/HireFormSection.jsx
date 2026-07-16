@@ -594,7 +594,7 @@ const HireFormSection = () => {
                                     <option value="3 year+">3 Year +</option>
                                 </select>
 
-                                <select name="salary" id="Salary"
+                                {/* <select name="salary" id="Salary"
                                     value={formData.salary}
                                     onChange={handleChange}
                                     class={selectClass}>
@@ -605,7 +605,13 @@ const HireFormSection = () => {
                                     <option value="Project">Per Project</option>
                                     <option value="Fixed">Fixed + Incentive</option>
                                     <option value="Incentive">Incentive Only</option>
-                                </select>
+                                </select> */}
+                                <input type="text" className={`${inputClass} sm:col-span-2`} 
+                                name="salary"
+                                value={formData.salary}
+                                onChange={handleChange}
+                                id="Salary"
+                                />
 
                                 <select name="workHour" id="WHour"
                                     value={formData.workHour}
