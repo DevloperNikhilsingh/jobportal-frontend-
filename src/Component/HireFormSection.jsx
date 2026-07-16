@@ -134,6 +134,9 @@ const HireFormSection = () => {
         }
     };
 
+    const inputClass = "p-3.5 rounded-xl bg-white focus:outline-none border border-gray-200 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-200 hover:border-gray-300 placeholder:text-gray-400";
+    const selectClass = "p-3.5 rounded-xl bg-white focus:outline-none border border-gray-200 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-200 hover:border-gray-300 text-gray-500 appearance-none cursor-pointer";
+
     return (
         <section id="Postjob" class="py-6 px-4 bg-[#f4f3f8] mt-4" >
             <div class="max-w-7xl mt-6">
@@ -162,31 +165,32 @@ const HireFormSection = () => {
 
                         {alert.show && (
                             <motion.div
-                                className={`mt-4 p-4 rounded-lg text-white font-medium ${alert.type === "success" ? "bg-green-500" : "bg-red-500"}`}
+                                className={`mt-4 p-4 rounded-xl text-white font-medium shadow-lg flex items-center gap-2 ${alert.type === "success" ? "bg-green-500 shadow-green-500/20" : "bg-red-500 shadow-red-500/20"}`}
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: 0 }}
                             >
+                                <span className={`w-2 h-2 rounded-full bg-white ${alert.type === "success" ? "animate-pulse" : ""}`}></span>
                                 {alert.message}
                             </motion.div>
                         )}
 
                         <form onSubmit={handleSubmit} class="mt-4 ">
-                            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
+                            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5">
                                 <input type="text" id="Cname" name="companyName" placeholder="Company Name"
                                     value={formData.companyName}
                                     onChange={handleChange}
-                                    class="p-3 rounded bg-white focus:outline-none border border-gray-200" />
+                                    class={inputClass} />
 
                                 <input type="text" id="Jrole" name="jobTitle" placeholder="Job Position"
                                     value={formData.jobTitle}
                                     onChange={handleChange}
-                                    class="p-3 rounded bg-white focus:outline-none border border-gray-200" />
+                                    class={inputClass} />
 
                                 <input type="text" id="JDescription" name="jobDescription"
                                     placeholder="Job Description"
                                     value={formData.jobDescription}
                                     onChange={handleChange}
-                                    class="p-3 rounded bg-white focus:outline-none border border-gray-200" />
+                                    class={`${inputClass} sm:col-span-2`} />
 
                                 <div className="relative">
 
@@ -194,7 +198,7 @@ const HireFormSection = () => {
                                         <select
                                             value={jobLocation}
                                             onChange={handleLocationChange}
-                                            className="p-3 rounded bg-white border border-gray-200 text-gray-700"
+                                            className={`w-full ${selectClass}`}
                                         >
                                             <option value="">Select Job Location</option>
                                             <option value="Varanasi">Varanasi</option>
@@ -208,14 +212,14 @@ const HireFormSection = () => {
                                                 value={otherLocation}
                                                 onChange={(e) => setOtherLocation(e.target.value)}
                                                 placeholder="Enter Job Location"
-                                                className="w-full p-3 rounded border"
+                                                className={`w-full ${inputClass}`}
                                                 required
                                             />
 
                                             <button
                                                 type="button"
                                                 onClick={handleBackToDropdown}
-                                                className="mt-2 text-violet-600 hover:underline"
+                                                className="mt-2 text-sm text-violet-600 hover:text-violet-800 hover:underline transition-colors"
                                             >
                                                 ← Choose from List
                                             </button>
@@ -227,7 +231,7 @@ const HireFormSection = () => {
                                 <select name="experience" id="ERequired"
                                     value={formData.experience}
                                     onChange={handleChange}
-                                    class="p-3 rounded bg-white focus:outline-none border border-gray-200 text-gray-400 appearance-none">
+                                    class={selectClass}>
                                     <option value="">Experience Required</option>
                                     <option value="Intern">Intern</option>
                                     <option value="Fresher">Fresher</option>
@@ -240,7 +244,7 @@ const HireFormSection = () => {
                                 <select name="salary" id="Salary"
                                     value={formData.salary}
                                     onChange={handleChange}
-                                    class="p-3 rounded bg-white focus:outline-none border border-gray-200  appearance-none text-gray-400 ">
+                                    class={selectClass}>
                                     <option value="">Salary</option>
                                     <option value="Monthly">Monthly</option>
                                     <option value="Anum">Anum (Yearly)</option>
@@ -253,7 +257,7 @@ const HireFormSection = () => {
                                 <select name="workHour" id="WHour"
                                     value={formData.workHour}
                                     onChange={handleChange}
-                                    class="p-3 rounded bg-white focus:outline-none border border-gray-200 text-gray-400 appearance-none">
+                                    class={selectClass}>
                                     <option value="">Work Hour</option>
                                     <option value="Part Time">Part Time</option>
                                     <option value="Full Time">Full Time</option>
@@ -263,7 +267,7 @@ const HireFormSection = () => {
                                 <select name="jobType" id="JobType"
                                     value={formData.jobType}
                                     onChange={handleChange}
-                                    class="p-3 rounded bg-white focus:outline-none border border-gray-200 text-gray-400 appearance-none">
+                                    class={selectClass}>
                                     <option value="">Job Type</option>
                                     <option value="Remote">Remote</option>
                                     <option value="On Site">On Site</option>
@@ -274,15 +278,15 @@ const HireFormSection = () => {
                                     placeholder="Required skill e.g. Java, Spring Boot, React"
                                     value={formData.skills}
                                     onChange={handleChange}
-                                    class="w-full p-3 rounded bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500" />
+                                    class={`w-full ${inputClass} sm:col-span-2`} />
 
-                                <div>
-                                    <label for="" class="block text-sm font-inter font-bold">Upload your
+                                <div class="sm:col-span-2">
+                                    <label for="post" class="block text-sm font-inter font-bold text-gray-700 mb-1">Upload your
                                         Post</label>
                                     <input type="file" id="post" name="image"
                                         accept="image/*"
                                         onChange={handleChange}
-                                        class=" rounded bg-white file:w-50 file:h-12.5 file:border file:border-gray-600 file:rounded-xl focus-outline-none mt-2" />
+                                        class="w-full text-sm text-gray-500 rounded-xl bg-white border border-gray-200 p-1.5 file:mr-3 file:px-4 file:py-2.5 file:border-0 file:rounded-lg file:bg-violet-50 file:text-violet-700 file:font-medium hover:file:bg-violet-100 file:transition-colors file:cursor-pointer focus:outline-none focus:ring-2 focus:ring-violet-500" />
                                 </div>
                             </div>
 
@@ -290,10 +294,17 @@ const HireFormSection = () => {
                                 <motion.button 
                                     type="submit"
                                     disabled={loading}
-                                    class="bg-linear-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA] bg-size-200%_auto hover:bg-right transition-all duration-500 w-37.5 h-10 text-white rounded-md mt-4 "
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    class="bg-linear-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA] bg-size-200%_auto hover:bg-right transition-all duration-500 w-37.5 h-10 text-white rounded-md mt-6 font-medium shadow-lg shadow-violet-500/25 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                    whileHover={{ scale: loading ? 1 : 1.05 }}
+                                    whileTap={{ scale: loading ? 1 : 0.95 }}
                                 >
+                                    {loading && (
+                                        <motion.span
+                                            className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full"
+                                            animate={{ rotate: 360 }}
+                                            transition={{ repeat: Infinity, duration: 0.7, ease: "linear" }}
+                                        />
+                                    )}
                                     {loading ? "Posting..." : "Post Job"}
                                 </motion.button>
                             </div>
@@ -314,6 +325,10 @@ const HireFormSection = () => {
 
                         <div
                             class="absolute top-10 right-10 w-3 h-3 bg-violet-400 rounded-full animate-pulse">
+                        </div>
+
+                        <div
+                            class="absolute bottom-14 left-8 w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: "0.6s" }}>
                         </div>
 
                         <motion.img 

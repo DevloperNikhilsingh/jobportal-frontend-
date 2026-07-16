@@ -7,17 +7,14 @@ html{
 }
 
 
-html,
+/* html,
 body {
     overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
+} */
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
-}
+
 .logo-track {
                                 display: flex;
                                 align-items: center;
