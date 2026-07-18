@@ -385,7 +385,7 @@ const AdminApplications = () => {
                 <div className="mt-2">
                   {viewingApp.resumeUrl ? (
                     <a
-                      href={`https://jobportal-backend-production-9a5e.up.railway.app/uploads/${viewingApp.resumeUrl}`}
+                      href={viewingApp.resumeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-linear-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA] text-white font-medium"
