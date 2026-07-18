@@ -607,7 +607,7 @@ const HireFormSection = () => {
                                     <option value="Incentive">Incentive Only</option>
                                 </select> */}
                                 <input type="text" className={`${inputClass} sm:col-span-2`} 
-                                placeholder='Salary'
+                                placeholder="Salary"
                                 name="salary"
                                 value={formData.salary}
                                 onChange={handleChange}

@@ -106,7 +106,7 @@ export default function Navbar({ openAuthModal }) {
                             <div className="relative" ref={popupRef}>
                                 <motion.div
                                     onClick={() => setShowLogoutPopup(!showLogoutPopup)}
-                                    className="w-10 h-10 rounded-full bg-linear-to-r from-red-500 to-rose-600 text-white flex items-center justify-center font-semibold cursor-pointer select-none"
+                                    className="w-10 h-10 rounded-full bg-linear-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA] text-white flex items-center justify-center font-semibold cursor-pointer select-none"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -132,7 +132,7 @@ export default function Navbar({ openAuthModal }) {
                         ) : (
                             <motion.button
                                 onClick={openAuthModal}
-                                className="px-6 py-2 rounded-full bg-linear-to-r from-red-500 to-rose-600 text-white text-sm font-semibold duration-300"
+                                className="px-6 py-2 rounded-full bg-linear-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA] text-white text-sm font-semibold duration-300"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ type: "spring", stiffness: 300 }}

@@ -88,7 +88,7 @@ const HeroSection = ({searchTitle, setSearchTitle, searchLocation, setSearchLoca
 
                                     <motion.button
                                         onClick={searchJobs}
-                                        className="rounded-xl font-semibold text-white bg-gradient-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA]"
+                                        className="rounded-xl font-semibold p-2 text-white bg-gradient-to-r from-[#4338CA] via-[#6D28D9] to-[#9333EA]"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         transition={{ type: "spring", stiffness: 300 }}
